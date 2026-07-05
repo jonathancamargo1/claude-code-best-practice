@@ -936,3 +936,91 @@
 | 3 | LOW | Changed Description | `feedbackSurveyRate`: add "Set to 0 to suppress" note | ✋ ON HOLD (0.6 confidence — not confirmed at content-match depth) |
 | 4 | LOW | Changed Description | `autoScrollEnabled`: add "Permission prompts still scroll" note | ✋ ON HOLD (0.6 confidence — not confirmed at content-match depth) |
 | 5 | LOW | Suspect Key | `OTEL_LOG_TOOL_DETAILS` — 41+ consecutive ON HOLD runs; annotation "in v2.1.85 changelog, not yet on official env-vars page" remains accurate | ✋ ON HOLD (kept — recurring from 2026-04-14 v2.1.107) |
+
+---
+
+## [2026-06-24 10:44 AM PKT] Claude Code v2.1.187
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | New Setting | Add `sandbox.credentials` (boolean, default `false`, v2.1.187) to Sandbox Settings table — blocks sandboxed commands from reading credential files and secret environment variables | ✅ COMPLETE (added to Sandbox Settings table after sandbox.allowAppleEvents) |
+| 2 | HIGH | Changed Behavior | Add `"iterm2"` to `teammateMode` valid values — force iTerm2 split-pane display for agent teammates (v2.1.186) | ✅ COMPLETE (added to Display Settings table teammateMode row) |
+| 3 | HIGH | New Setting | Add `respondToBashCommands` (boolean, default `true`, v2.1.186) to General Settings table — controls whether Claude auto-responds after `!` shell commands | ✅ COMPLETE (added to General Settings table after advisorModel) |
+| 4 | MED | Version Bump | Update report version badge from v2.1.185 → v2.1.187 and header "As of v2.1.185" → "As of v2.1.187" | ✅ COMPLETE (badge and header updated in Phase 2.6) |
+| 5 | LOW | Suspect Key | `OTEL_LOG_TOOL_DETAILS` — 42+ consecutive ON HOLD runs; annotation "in v2.1.85 changelog, not yet on official env-vars page" remains accurate | ✋ ON HOLD (kept — recurring from 2026-04-14 v2.1.107) |
+
+---
+
+## [2026-06-26 10:46 AM PKT] Claude Code v2.1.193
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | Changed Behavior | Update `sandbox.credentials` type from `boolean \| false` to object with `files` (array) and `envVars` (array) sub-fields per official settings page (v2.1.191+ change; entry was added as boolean in v2.1.187, evolved to object) | ✅ COMPLETE (type and description updated in Sandbox Settings table) |
+| 2 | HIGH | New Setting | Add `autoMode.classifyAllShell` (boolean) to `autoMode` description — routes all Bash/PowerShell commands through auto-mode classifier instead of only arbitrary-code-execution patterns (v2.1.193 changelog) | ✅ COMPLETE (added to autoMode description and Quick Reference JSON example) |
+| 3 | HIGH | Version Bump | Update report version badge v2.1.187 → v2.1.193 and header "As of v2.1.187" → "As of v2.1.193" | ✅ COMPLETE (badge and header updated in Phase 2.6) |
+| 4 | MED | New Env Var | Add `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP` to env vars section — disable memory-pressure reaping of idle background shell commands (v2.1.193 changelog, not yet on official env-vars page) | ✅ COMPLETE (added with changelog annotation) |
+| 5 | LOW | Suspect Key | `OTEL_LOG_TOOL_DETAILS` — 43+ consecutive ON HOLD runs (since v2.1.107, 2026-04-14); Rule 10B escalation threshold exceeded but still not on official env-vars page or JSON schema | ✋ ON HOLD (recurring from 2026-04-14 v2.1.107) |
+| 6 | LOW | Suspect Key | `OTEL_LOG_ASSISTANT_RESPONSES` — possible new OTEL env var for `claude_code.assistant_response` event added in v2.1.193, not confirmed on official env-vars page | ✋ ON HOLD (new — pending official confirmation) |
+| 7 | LOW | Potential New Setting | `skillDirectories` — listed on official settings page but description truncated; type, default, and scope unconfirmed | ✋ ON HOLD (new — pending official confirmation) |
+
+---
+
+## [2026-06-29 10:37 AM PKT] Claude Code v2.1.195
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | Missing Env Var | Add `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` to Common Environment Variables table — disables mouse interactions in fullscreen while preserving wheel scroll (v2.1.195 changelog; not on official env-vars page — annotated per Rule 5D/8A) | ✅ COMPLETE (added after `CLAUDE_CODE_DISABLE_MOUSE` with changelog annotation) — NEW |
+| 2 | HIGH | Version Bump | Update report version badge from v2.1.193 → v2.1.195 and header "As of v2.1.193" → "As of v2.1.195" | ✅ COMPLETE (badge and header updated in Phase 2.6) — NEW |
+| 3 | MED | Missing Env Var | Add `OTEL_LOG_ASSISTANT_RESPONSES` to OTEL env vars section — controls logging of model responses to telemetry (v2.1.193 changelog; not on official env-vars page — annotated per Rule 5D/8A) | ✅ COMPLETE (added after `OTEL_LOG_USER_PROMPTS` with changelog annotation) — RECURRING (first seen 2026-06-26 v2.1.193 #6) |
+| 4 | LOW | Annotation | Annotate `spinnerTipsEnabled` as "in JSON schema, not on official settings page" per Rule 1F — key has been in report without official backing annotation | ✅ COMPLETE (annotation added to description) — NEW |
+| 5 | LOW | Resolve ON HOLD | `skillDirectories` (ON HOLD from 2026-06-26 v2.1.193 #7) — NOT found on official settings page per direct verification this run; prior run finding was based on truncated fetch | ❌ INVALID (not on official settings page per direct check) — RECURRING (first seen 2026-06-26) |
+| 6 | LOW | Suspect Key Recurrence | `OTEL_LOG_TOOL_DETAILS` — still NOT on official env-vars page after 44+ consecutive runs | ✋ ON HOLD (kept — recurring from 2026-04-14 v2.1.107) |
+
+---
+
+## [2026-07-01 10:40 AM PKT] Claude Code v2.1.197
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | Version Bump | Update report version badge from v2.1.195 → v2.1.197 and header "As of v2.1.195" → "As of v2.1.197" | ✅ COMPLETE (badge and header updated in Phase 2.6) — NEW |
+| 2 | HIGH | Missing Setting | Add `enableArtifact` (boolean, v2.1.196+) to General Settings table — user-level opt-in for the Artifact web publishing tool | ✅ COMPLETE (added after `disableArtifact` in General Settings table) — NEW |
+| 3 | HIGH | Missing Setting | Add `forceLoginGatewayUrl` (string, Managed only) to Authentication Helpers table — pre-fills gateway URL when `forceLoginMethod: "gateway"` | ✅ COMPLETE (added to Authentication Helpers table after `forceLoginOrgUUID`) — NEW |
+| 4 | HIGH | Changed Description | Add `"gateway"` as third value for `forceLoginMethod` (alongside `"claudeai"` and `"console"`) | ✅ COMPLETE (description updated in Authentication Helpers table) — NEW |
+| 5 | HIGH | Missing Setting | Add `disableSideloadFlags` (boolean, Managed only, v2.1.193) to Plugin Settings table — rejects `--plugin-dir` and `--plugin-url` startup flags | ✅ COMPLETE (added at end of Plugin Settings table) — NEW |
+| 6 | MED | Changed Description | Fix `CLAUDE_ENABLE_STREAM_WATCHDOG` — now enabled by default as of v2.1.163; set to `0` to disable (old description implied opt-in with `1`) | ✅ COMPLETE (description updated to reflect default-on behavior) — NEW |
+| 7 | MED | Missing Setting | Add `thinkingBudgetTokens` (number) to General Settings table — fixed token budget for extended thinking per response | ✅ COMPLETE (added after `alwaysThinkingEnabled` in General Settings table) — NEW |
+| 8 | MED | Changed Default | Fix `teammateMode` default from `"auto"` → `"in-process"` (changed in v2.1.179 per CLI reference) | ✅ COMPLETE (Default column updated; description updated to note "default since v2.1.179") — NEW |
+| 9 | MED | New Command | Add `claude gateway` to Useful Commands table (v2.1.195) | ✅ COMPLETE (added to Useful Commands table) — NEW |
+| 10 | LOW | MCP Security | Add v2.1.196 `.mcp.json` self-approval security hardening note to `enableAllProjectMcpServers` description | ✅ COMPLETE (security note added to `enableAllProjectMcpServers` description in MCP Settings table) — NEW |
+| 11 | LOW | Model Alias | Update `"sonnet"` alias to point to Claude Sonnet 5 per v2.1.197 changelog | ✋ ON HOLD (claude-code-guide agent returned `claude-sonnet-4-6` contradicting workflow-claude-settings-agent finding; per Rule 8A skipping until confirmed by official settings docs) — NEW |
+| 12 | LOW | Suspect Key Recurrence | `OTEL_LOG_TOOL_DETAILS` — still NOT on official env-vars page after 45+ consecutive runs | ✋ ON HOLD (kept — recurring from 2026-04-14 v2.1.107) |
+
+---
+
+## [2026-07-03 10:42 AM PKT] Claude Code v2.1.199
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | Version Bump | Update report version badge from v2.1.197 → v2.1.199 and header "As of v2.1.197" → "As of v2.1.199" | ✅ COMPLETE (badge and header updated in Phase 2.6) — NEW |
+| 2 | HIGH | Model Alias | Update `"sonnet"` alias to point to Claude Sonnet 5 on the Anthropic API (native 1M-token context, v2.1.197); Claude Sonnet 4.6 on Bedrock/Vertex/Foundry | ✅ COMPLETE (Model Aliases table updated; both agents confirm Sonnet 5 this run) — RECURRING (first seen 2026-07-01 #11) |
+| 3 | HIGH | Missing Env Var | Add `CLAUDE_AFK_TIMEOUT_MS` (v2.1.198) — AskUserQuestion dialog auto-continue timeout (default 60000ms) | ✅ COMPLETE (added after `CLAUDE_CODE_CONNECT_TIMEOUT_MS`) — NEW |
+| 4 | HIGH | Missing Env Var | Add `CLAUDE_AFK_COUNTDOWN_MS` (v2.1.198) — countdown display delay before auto-continue (default 20000ms) | ✅ COMPLETE (added after `CLAUDE_AFK_TIMEOUT_MS`) — NEW |
+| 5 | HIGH | Missing Env Var | Add `CLAUDE_CODE_DISABLE_BG_EXIT_HANDOFF` (v2.1.198) — prevent background task handoff when supervisor restarts | ✅ COMPLETE (added after `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP`) — NEW |
+| 6 | HIGH | Missing Env Var | Add `CLAUDE_CODE_DISABLE_EXPLORE_PLAN_AGENTS` (v2.1.198) — disable built-in Explore and Plan subagents | ✅ COMPLETE (added after `CLAUDE_CODE_DISABLE_AGENT_VIEW`) — NEW |
+| 7 | HIGH | Missing Env Var | Add `CLAUDE_CODE_BRIDGE_SESSION_ID` (v2.1.199) — read-only Remote Control session ID in Bash/hook subprocesses | ✅ COMPLETE (added after `CLAUDE_CODE_REMOTE_SESSION_ID`) — NEW |
+| 8 | LOW | Suspect Key Recurrence | `OTEL_LOG_TOOL_DETAILS` — still NOT on official env-vars page after 46+ consecutive runs | ✋ ON HOLD (kept — recurring from 2026-04-14 v2.1.107) |
+| 9 | LOW | Unconfirmed Env Var | `CLAUDE_CODE_RETRY_WATCHDOG` — flagged by workflow agent at 0.85 confidence but NOT found on official env-vars page per Rule 8A | ✋ ON HOLD (not on official env-vars page; will re-check next run) — NEW |
+
+---
+
+## [2026-07-04 10:47 AM PKT] Claude Code v2.1.201
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | Version Bump | Update report version badge from v2.1.199 → v2.1.201 and header "As of v2.1.199" → "As of v2.1.201" | ✅ COMPLETE (badge and header updated in Phase 2.6) — NEW |
+| 2 | HIGH | New Setting | Add `askUserQuestionTimeout` to General Settings table — string, default `"never"`, values `"60s"/"5m"/"10m"/"never"`. Controls auto-continue behavior for unanswered AskUserQuestion dialogs. Confirmed on official settings page (v2.1.200) | ✅ COMPLETE (added after `respondToBashCommands` in General Settings table) — NEW |
+| 3 | HIGH | New Permission Mode | Add `"manual"` alias row to Permission Modes table and update `permissions.defaultMode` description — v2.1.200 introduced `"manual"` as an alias for `"default"` for UI clarity across CLI, VS Code, and JetBrains. Confirmed in v2.1.200 changelog | ✅ COMPLETE (added to Permission Modes table; defaultMode description updated) — NEW |
+| 4 | MED | Changed Description | Update `CLAUDE_AFK_TIMEOUT_MS` — v2.1.200 changed the default behavior: AskUserQuestion dialogs no longer auto-continue by default (`askUserQuestionTimeout: "never"` is the new default). `CLAUDE_AFK_TIMEOUT_MS` now applies only when `askUserQuestionTimeout` is explicitly set to a duration | ✅ COMPLETE (description updated to clarify v2.1.200 semantics) — NEW |
+| 5 | LOW | Changed Description | Update `apiKeyHelper` — description said only `X-Api-Key`; official docs confirm the script output is also sent as `Authorization: Bearer` header. Completed. | ✅ COMPLETE (description updated in Authentication Helpers table) — NEW |
+| 6 | LOW | Suspect Key Recurrence | `OTEL_LOG_TOOL_DETAILS` — still NOT on official /en/env-vars page after 47+ consecutive runs | ✋ ON HOLD (recurring from 2026-04-14 v2.1.107) |
+| 7 | LOW | Suspect Key Recurrence | `CLAUDE_CODE_RETRY_WATCHDOG` — still NOT on official env-vars page per Rule 8A verification | ✋ ON HOLD (recurring from 2026-07-03 v2.1.199) |

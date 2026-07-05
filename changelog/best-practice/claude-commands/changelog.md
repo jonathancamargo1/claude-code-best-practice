@@ -509,3 +509,85 @@ No priority action items — report is fully in sync with official documentation
 ## [2026-06-23 11:06 AM PKT] Claude Code v2.1.186
 
 No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 85 built-in commands).
+
+---
+
+## [2026-06-24 11:06 AM PKT] Claude Code v2.1.187
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 85 built-in commands).
+
+---
+
+## [2026-06-25 11:07 AM PKT] Claude Code v2.1.191
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | MED | Changed Description | Update `/model [model]` — docs now emphasize saving as default for new sessions; add `s` key for session-only switch | ✅ COMPLETE (updated description to match official docs) |
+| 2 | MED | Changed Description | Update `/review [PR]` — docs now reference `/code-review` engine and note that no-argument invocation lists open PRs | ✅ COMPLETE (updated description to match official docs) |
+| 3 | MED | Changed Description | Update `/install-github-app` — expanded to "Install the Claude GitHub App for a repository, with an optional step to set up GitHub Actions workflows and secrets" | ✅ COMPLETE (updated description to match official docs) |
+
+---
+
+## [2026-06-26 11:06 AM PKT] Claude Code v2.1.193
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 85 built-in commands).
+
+---
+
+## [2026-06-27 11:07 AM PKT] Claude Code v2.1.195
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | LOW | Scope Decision | Review `when_to_use` field — present in report (count 16) but official reference table lists only 15 fields; field is still mentioned inline in docs under the `description` row | ✋ ON HOLD (field still referenced inline in official docs — not removing until it is explicitly absent from reference table) |
+
+---
+
+## [2026-06-28 11:06 AM PKT] Claude Code v2.1.195
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 85 built-in commands).
+
+---
+
+## [2026-06-29 11:07 AM PKT] Claude Code v2.1.195
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 85 built-in commands).
+
+---
+
+## [2026-06-30 11:07 AM PKT] Claude Code v2.1.196
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | HIGH | New Command | Add `/design-login` to Auth tag — Authorize design-system access for `/design-sync` with your claude.ai account | ✅ COMPLETE (added as #1 in Auth tag; existing rows 1–85 renumbered to 2–86; count updated 85 → 86) |
+
+---
+
+## [2026-07-01 11:07 AM PKT] Claude Code v2.1.197
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 86 built-in commands).
+
+---
+
+## [2026-07-02 11:06 AM PKT] Claude Code v2.1.198
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 86 built-in commands).
+
+---
+
+## [2026-07-03 11:06 AM PKT] Claude Code v2.1.199
+
+| # | Priority | Type | Action | Status |
+|---|----------|------|--------|--------|
+| 1 | MED | Changed Description | Update `/agents` — behavior changed in v2.1.198: now prints a reminder to ask Claude or edit `.claude/agents/`/`~/.claude/agents/` directly, rather than opening an interactive management UI | ✅ COMPLETE (updated description at #38 in Extensions tag) |
+
+---
+
+## [2026-07-04 11:06 AM PKT] Claude Code v2.1.201
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 86 built-in commands).
+
+---
+
+## [2026-07-05 11:06 AM PKT] Claude Code v2.1.201
+
+No priority action items — report is fully in sync with official documentation (16 frontmatter fields, 86 built-in commands).
